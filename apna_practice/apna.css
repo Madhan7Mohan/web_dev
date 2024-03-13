@@ -1,0 +1,33 @@
+#boxx {
+    position: relative;
+    height: 400px;
+    width: 150px;
+    border: 3px solid black;
+    background-color: black;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+#red, #yellow, #green {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    left: 35px;
+}
+
+#red {
+    background-color: red;
+    top: 20px;
+}
+
+#yellow {
+    background-color: yellow;
+    top: 160px;
+}
+
+#green {
+    background-color: green;
+    top: 300px;
+}

@@ -1,0 +1,24 @@
+div{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    border: 2px solid black;
+    /* transform: rotate(45deg); */
+    /* also applicable for content */
+    position: absolute;
+    top: 100px;
+    left:100px;
+   /* scale:(1) ; increases the size */
+transition: all 2s ease-in;
+   
+}
+
+
+div:hover{
+    background-color: pink;
+    color:black;
+    font-size: 15px;
+   transform: skew(30deg,50deg);
+   /*transform: translate(100px,80px);*/
+    /* transform: translate(50px);changes the position */
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DOM Manipulation Example</title>
+<style>
+  .highlighted {
+    background-color: yellow;
+  }
+</style>
+</head>
+<body>
+
+<div id="myElement">Hello, world!</div>
+<div class="myClass">Element with class</div>
+<p>Paragraph element</p>
+
+<script>
+  var elementById = document.getElementById("myElement");
+  var elementsByClass = document.getElementsByClassName("myClass");
+  var elementsByTag = document.getElementsByTagName("p");
+  var querySelector = document.querySelector("#myElement");
+
+  console.log("Element by ID:", elementById);
+  console.log("Elements by Class:", elementsByClass);
+  console.log("Elements by Tag:", elementsByTag);
+  console.log("Query Selector:", querySelector);
+
+  console.log("Before Manipulation:");
+  console.log("elementById.innerHTML:", elementById.innerHTML);
+  console.log("elementsByClass[0].innerText:", elementsByClass[0].innerText);
+  console.log("elementsByTag[0].style.color:", elementsByTag[0].style.color);
+
+  elementById.innerHTML = "New content";
+  elementsByClass[0].innerText = "New text";
+  elementsByTag[0].style.color = "blue";
+
+  console.log("After Manipulation:");
+  console.log("elementById.innerHTML:", elementById.innerHTML);
+  console.log("elementsByClass[0].innerText:", elementsByClass[0].innerText);
+  console.log("elementsByTag[0].style.color:", elementsByTag[0].style.color);
+
+  var newElement = document.createElement("div");
+  newElement.innerHTML = "New Element";
+  document.body.appendChild(newElement);
+
+  console.log("Newly created element:", newElement);
+
+  elementById.addEventListener("click", function() {
+    elementById.classList.toggle("highlighted");
+  });
+
+  elementById.setAttribute("title", "My Element");
+  newElement.id = "newDiv";
+
+  console.log("Attributes modified:");
+  console.log("elementById.title:", elementById.title);
+  console.log("newElement.id:", newElement.id);
+
+  var parentElement = document.body;
+  console.log("Before removal:", parentElement.innerHTML);
+  parentElement.removeChild(elementsByTag[0]);
+  console.log("After removal:", parentElement.innerHTML);
+
+</script>
+
+</body>
+</html>

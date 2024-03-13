@@ -1,0 +1,41 @@
+div{
+    height: 100px;
+    width: 100px;
+    background-color: aquamarine;
+    border: 2px solid black;
+    position: absolute;
+    border-radius: 50%;
+top: 100px;
+left: 100px;
+text-align: center;
+/* animation-name: colorAnimate;
+animation-duration: 1s;
+animation-timing-function: ease-in;
+animation-iteration-count: infinite;
+animation-delay: 0.2s;
+animation-direction:alternate-reverse; */
+animation: colorAnimate 2s linear 3s infinite reverse;
+}
+
+p{
+    margin: 1px;
+    padding: 15px;
+}
+
+
+@keyframes colorAnimate{
+    from{
+        background-color:aquamarine;
+     left: 0px;
+        color: black;
+    }
+    to{
+        background-color: red;
+        left: 200px;
+        color: white;
+    }
+}
+
+div:hover{
+
+}
